@@ -1,0 +1,13 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.anchor1{
+	
+	-fx-background:rgba(0,0,0.5);
+	-fx-padding:40px;
+	-fx-border-color:rgbargb(255,140,0);
+}
+.login{
+	
+	-fx-background-color:transparent;
+	
+	}
+	

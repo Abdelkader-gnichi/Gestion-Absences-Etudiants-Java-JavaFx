@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="671.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SelectionResponsableController">
+   <children>
+      <AnchorPane prefHeight="214.0" prefWidth="602.0" style="-fx-background-color: #819EA5;">
+         <children>
+            <Label layoutX="79.0" layoutY="68.0" text="EspacePré Responsable" textFill="WHITE">
+               <font>
+                  <Font name="Gentium Basic Bold" size="44.0" />
+               </font>
+            </Label>
+            <Label layoutX="84.0" layoutY="71.0" prefHeight="23.0" prefWidth="217.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="613.0" prefHeight="58.0" prefWidth="602.0" style="-fx-background-color: #819EA5;">
+         <children>
+            <Label layoutX="159.0" layoutY="9.0" prefHeight="30.0" prefWidth="284.0" text="😊 : choisissez votre destination">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="42.0" fitWidth="50.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../ImagesDuProjet/iconefst.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="21.0" layoutY="36.0" prefHeight="17.0" prefWidth="157.0" text="Faculté des sciences de tunis" textFill="WHITE" />
+            <DatePicker layoutX="458.0" layoutY="18.0" opacity="0.75" prefHeight="25.0" prefWidth="136.0" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="638.0" fitWidth="715.0" layoutX="-6.0" layoutY="76.0" opacity="0.39" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../ImagesDuProjet/iconefst.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="497.0" layoutY="546.0" mnemonicParsing="false" onAction="#entrer" style="-fx-background-radius: 30;" text="Entrez">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Label layoutX="52.0" layoutY="244.0" text="Niveau">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="345.0" layoutY="244.0" text="Filière">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <VBox layoutX="47.0" layoutY="319.0" prefHeight="97.0" prefWidth="100.0">
+         <children>
+            <RadioButton fx:id="LFI1" mnemonicParsing="false" text="lfi1">
+               <font>
+                  <Font name="Consolas Italic" size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="niveau" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="LFI2" mnemonicParsing="false" text="Lfi2" toggleGroup="$niveau">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Consolas Italic" size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="LFI3" mnemonicParsing="false" text="Lfi3" toggleGroup="$niveau">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Consolas Italic" size="16.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </VBox>
+      <VBox layoutX="206.0" layoutY="317.0" prefHeight="109.0" prefWidth="374.0">
+         <children>
+            <RadioButton fx:id="Licence_fondamentale_en_informatique" mnemonicParsing="false" text="Licence fondamentale en informatique">
+               <font>
+                  <Font name="Consolas Italic" size="17.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="filiere" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="Licence_fondamentale_en_physique" mnemonicParsing="false" text="Licence fondamentale en physique " toggleGroup="$filiere">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Consolas Italic" size="17.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="Licence_fondamentale_en_EEE" mnemonicParsing="false" text="Licence fondamentale en EEE" toggleGroup="$filiere">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Consolas Italic" size="17.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </VBox>
+      <Button layoutX="22.0" layoutY="572.0" mnemonicParsing="false" onAction="#retour" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 1000; -fx-background-color: #95FF31;" text="R">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

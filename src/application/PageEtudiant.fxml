@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="671.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EtudiantController">
+   <children>
+      <AnchorPane prefHeight="214.0" prefWidth="602.0" style="-fx-background-color: #FFB455;">
+         <children>
+            <ImageView fx:id="imget" fitHeight="157.0" fitWidth="165.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="176.0" layoutY="5.0" text="Espace Etudiant" textFill="WHITE">
+               <font>
+                  <Font name="Gentium Basic Bold" size="44.0" />
+               </font>
+            </Label>
+            <Label fx:id="nomet" layoutX="14.0" layoutY="161.0" text="invalide">
+               <font>
+                  <Font name="MV Boli" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="prenomet" layoutX="112.0" layoutY="161.0" text="invalide">
+               <font>
+                  <Font name="MV Boli" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="186.0" layoutY="140.0" text="Classe:">
+               <font>
+                  <Font name="MV Boli" size="33.0" />
+               </font>
+            </Label>
+            <Label fx:id="classeet" layoutX="301.0" layoutY="149.0" prefHeight="40.0" prefWidth="235.0" text="invalide">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="23.0" />
+               </font></Label>
+            <Label layoutX="189.0" layoutY="82.0" text="Filiere:">
+               <font>
+                  <Font name="MV Boli" size="33.0" />
+               </font>
+            </Label>
+            <Label fx:id="filiereet" layoutX="301.0" layoutY="97.0" prefHeight="40.0" prefWidth="299.0" text="invalide">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="23.0" />
+               </font></Label>
+            <JFXDatePicker defaultColor="BLACK" layoutX="552.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" showTime="true" />
+            
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="613.0" prefHeight="58.0" prefWidth="602.0" style="-fx-background-color: #FFB455;">
+         <children>
+            <Label layoutX="214.0" layoutY="15.0" prefHeight="30.0" prefWidth="205.0" text="😊 : Soyer Présent svp">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="42.0" fitWidth="50.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../ImagesDuProjet/iconefst.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="21.0" layoutY="36.0" prefHeight="17.0" prefWidth="157.0" text="Faculté des sciences de tunis" textFill="WHITE" />
+            <DatePicker layoutX="458.0" layoutY="18.0" opacity="0.75" prefHeight="25.0" prefWidth="136.0" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tableet" layoutX="4.0" layoutY="220.0" prefHeight="317.0" prefWidth="593.0" tableMenuButtonVisible="true">
+        <columns>
+          <TableColumn fx:id="c1" prefWidth="152.0" text="Date d'absence" />
+          <TableColumn fx:id="c2" prefWidth="102.0" text="Nom du prof" />
+            <TableColumn fx:id="c3" prefWidth="107.0" text="Matière" />
+            <TableColumn fx:id="c4" prefWidth="117.0" text="numéro de scéance" />
+            <TableColumn fx:id="c5" prefWidth="101.0" text="Etat d'étudiant" />
+        </columns>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TableView>
+      <Label layoutX="90.0" layoutY="550.0" prefHeight="53.0" prefWidth="102.0" text="Justifié ici:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="justifiezet" layoutX="214.0" layoutY="554.0" mnemonicParsing="false" onAction="#justifier" prefHeight="32.0" prefWidth="157.0" text="justifiez " textFill="#ff7300">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Button>
+      <Button layoutX="14.0" layoutY="580.0" mnemonicParsing="false" onAction="#retour1" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 1000; -fx-background-color: #95FF31;" text="R">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

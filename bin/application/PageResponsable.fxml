@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="671.0" prefWidth="602.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ResponsableController">
+   <children>
+      <AnchorPane prefHeight="214.0" prefWidth="602.0" style="-fx-background-color: #4ECEF4;">
+         <children>
+            <ImageView fitHeight="157.0" fitWidth="152.0" layoutX="5.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../ImagesDuProjet/responsable.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="176.0" layoutY="5.0" text="Espace Responsable " textFill="WHITE">
+               <font>
+                  <Font name="Gentium Basic Bold" size="44.0" />
+               </font>
+            </Label>
+            <Label fx:id="nomresp" layoutX="14.0" layoutY="161.0" text="invalide">
+               <font>
+                  <Font name="MV Boli" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="prenomresp" layoutX="101.0" layoutY="161.0" text="invalide">
+               <font>
+                  <Font name="MV Boli" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="185.0" layoutY="140.0" text="Niveau:">
+               <font>
+                  <Font name="MV Boli" size="33.0" />
+               </font>
+            </Label>
+            <Label fx:id="niveauresp" layoutX="307.0" layoutY="159.0" prefHeight="23.0" prefWidth="177.0" text="invalide">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="21.0" />
+               </font></Label>
+            <Label layoutX="185.0" layoutY="82.0" text="Filière:">
+               <font>
+                  <Font name="MV Boli" size="33.0" />
+               </font>
+            </Label>
+            <Label fx:id="filiereresp" layoutX="295.0" layoutY="102.0" prefHeight="27.0" prefWidth="250.0" text="invalide">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="21.0" />
+               </font></Label>
+            <JFXDatePicker defaultColor="BLACK" layoutX="552.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" showTime="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="613.0" prefHeight="58.0" prefWidth="602.0" style="-fx-background-color: #4ECEF4;">
+         <children>
+            <Label layoutX="184.0" layoutY="9.0" prefHeight="30.0" prefWidth="256.0" text="😊 : Vous etes le Bienvenue">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="42.0" fitWidth="50.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../ImagesDuProjet/iconefst.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="21.0" layoutY="36.0" prefHeight="17.0" prefWidth="157.0" text="Faculté des sciences de tunis" textFill="WHITE" />
+            <DatePicker layoutX="458.0" layoutY="18.0" opacity="0.75" prefHeight="25.0" prefWidth="136.0" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="63.0" layoutY="219.0" prefHeight="23.0" prefWidth="196.0" text="Liste Des Absences:">
+         <font>
+            <Font name="DejaVu Sans Mono Bold" size="17.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableAb" layoutX="10.0" layoutY="242.0" onMouseClicked="#tableemailclick" prefHeight="278.0" prefWidth="582.0">
+        <columns>
+            <TableColumn fx:id="c1" prefWidth="103.0" text="Date" />
+          <TableColumn fx:id="c3" prefWidth="102.0" text="Prénom" />
+          <TableColumn fx:id="c2" prefWidth="110.0" text="Nom" />
+            <TableColumn fx:id="c4" prefWidth="97.0" text="Matière" />
+            <TableColumn fx:id="c5" prefWidth="102.0" text="Enseignant" />
+            <TableColumn fx:id="c6" prefWidth="69.0" text="Justifiée?" />
+        </columns>
+      </TableView>
+      <Label layoutX="63.0" layoutY="525.0" prefHeight="23.0" prefWidth="280.0" text="Gestion Des Absences:">
+         <font>
+            <Font name="DejaVu Sans Mono Bold" size="17.0" />
+         </font>
+      </Label>
+      <Button layoutX="29.0" layoutY="569.0" mnemonicParsing="false" onAction="#supprimer" text="Supprimer" />
+      <Button fx:id="imp" layoutX="184.0" layoutY="569.0" mnemonicParsing="false" onAction="#imprimeListeAbsents" prefHeight="25.0" prefWidth="72.0" text="Imprimer" />
+      <Button layoutX="323.0" layoutY="569.0" mnemonicParsing="false" onAction="#envoyermail" text="Envoyer mail" />
+      <Button layoutX="459.0" layoutY="580.0" mnemonicParsing="false" onAction="#graphe" prefHeight="27.0" prefWidth="56.0" style="-fx-background-radius: 1000;" text="GASB" />
+      <Button layoutX="2.0" layoutY="585.0" mnemonicParsing="false" onAction="#retour" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 1000; -fx-background-color: #95FF31;" text="R">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <VBox layoutX="470.0" layoutY="524.0" prefHeight="53.0" prefWidth="114.0">
+         <children>
+            <RadioButton fx:id="filiere" mnemonicParsing="false" style="-fx-background-radius: 1000;" text="Filiere">
+               <toggleGroup>
+                  <ToggleGroup fx:id="selectiongraphe" />
+               </toggleGroup>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="classe" mnemonicParsing="false" style="-fx-background-radius: 1000;" text="Classe" toggleGroup="$selectiongraphe">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="niveau" mnemonicParsing="false" style="-fx-background-radius: 1000;" text="Niveau" toggleGroup="$selectiongraphe">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </VBox>
+      <Button layoutX="527.0" layoutY="580.0" mnemonicParsing="false" onAction="#pie" prefHeight="27.0" prefWidth="56.0" style="-fx-background-radius: 1000;" text="GASP" />
+   </children>
+</AnchorPane>

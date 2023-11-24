@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.HTMLEditor?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="671.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.JustificationController">
+   <children>
+      <AnchorPane prefHeight="214.0" prefWidth="602.0" style="-fx-background-color: #819EA5;">
+         <children>
+            <Label layoutX="101.0" layoutY="68.0" text="Espace Justification" textFill="WHITE">
+               <font>
+                  <Font name="Gentium Basic Bold" size="44.0" />
+               </font>
+            </Label>
+            <Label layoutX="84.0" layoutY="71.0" prefHeight="23.0" prefWidth="217.0" />
+         </children>
+      </AnchorPane>
+      <HTMLEditor htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="48.0" layoutY="297.0" prefHeight="200.0" prefWidth="506.0" />
+      <TextField layoutX="48.0" layoutY="262.0" prefHeight="35.0" prefWidth="183.0" promptText="Nom" />
+      <TextField layoutX="378.0" layoutY="262.0" prefHeight="35.0" prefWidth="176.0" promptText="Prénom" />
+      <Button layoutX="393.0" layoutY="557.0" mnemonicParsing="false" onAction="#validerjustification" prefHeight="53.0" prefWidth="104.0" text="Valider">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Button>
+      <Button layoutX="5.0" layoutY="583.0" mnemonicParsing="false" onAction="#retour" prefHeight="37.0" prefWidth="32.0" style="-fx-background-radius: 1000; -fx-background-color: #95FF31;" text="R">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
